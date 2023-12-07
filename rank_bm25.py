@@ -30,7 +30,7 @@ class BM25:
     def _initialize(self, corpus):
         nd = {}  # word -> number of documents with word
         num_doc = 0
-        for document["main_content"] in corpus:
+        for document in corpus:
             self.doc_len.append(len(document["main_content"]))
             num_doc += len(document["main_content"])
 
