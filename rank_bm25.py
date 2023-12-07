@@ -30,12 +30,12 @@ class BM25:
     def _initialize(self, corpus):
         nd = {}  # word -> number of documents with word
         num_doc = 0
-        for document in corpus:
-            self.doc_len.append(len(document))
+        for document["main_content"] in corpus:
+            self.doc_len.append(len(document["main_content"]))
             num_doc += len(document)
 
             frequencies = {}
-            for word in document:
+            for word in document["main_content"]:
                 if word not in frequencies:
                     frequencies[word] = 0
                 frequencies[word] += 1
