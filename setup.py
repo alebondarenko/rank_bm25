@@ -16,7 +16,7 @@ except FileNotFoundError:
 
 setup(
     name='rank_bm25',
-    version=get_version(),
+    #version=get_version(),
     description=short_description,
     long_description=long_description,
     long_description_content_type='text/markdown',
