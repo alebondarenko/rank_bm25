@@ -32,7 +32,7 @@ class BM25:
         num_doc = 0
         for document["main_content"] in corpus:
             self.doc_len.append(len(document["main_content"]))
-            num_doc += len(document)
+            num_doc += len(document["main_content"])
 
             frequencies = {}
             for word in document["main_content"]:
