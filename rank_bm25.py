@@ -72,7 +72,7 @@ class BM25:
 
         scores = self.get_scores(query)
         top_n = np.argsort(scores)[::-1][:n]
-        return [documents[i] for i in top_n]
+        return [documents[i] for i in top_n], [scores[i] for i in top_n]
 
 
 class BM25Okapi(BM25):
